@@ -7,6 +7,7 @@ import {
 } from 'typeorm';
 import { Product } from './product.entity';
 
+@Entity()
 export class StockDecreaseLog extends BaseEntity {
   @PrimaryGeneratedColumn()
   public id!: number;
@@ -21,5 +22,5 @@ export class StockDecreaseLog extends BaseEntity {
    * Many-To-One RelationShips
    */
   @ManyToOne(() => Product, (product) => product.stockDecreaseLogs)
-  public product!: Product;
+  public product: Product;
 }

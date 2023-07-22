@@ -31,5 +31,5 @@ export class Product extends BaseEntity {
     () => StockDecreaseLog,
     (stockDecreaseLog) => stockDecreaseLog.product,
   )
-  public stockDecreaseLogs!: StockDecreaseLog[];
+  public stockDecreaseLogs: StockDecreaseLog[];
 }
